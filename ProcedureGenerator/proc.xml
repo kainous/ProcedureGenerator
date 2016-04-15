@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Procedure>
+    <People>
+        <Person>
+            <Name>Qun Li</Name>
+            <Email>qun.li@halliburton.com</Email>
+            <Abbreviation>QL</Abbreviation>
+        </Person>
+        <Person>
+            <Name>Youdee Uchime</Name>
+            <Email>youdee.uchime@halliburton.com</Email>
+            <Abbreviation>YUU</Abbreviation>
+        </Person>
+        <Person>
+            <Name>Nicholas Cooper</Name>
+            <Email>nicholas.cooper@halliburton.com</Email>
+            <Abbreviation>NAC</Abbreviation>
+        </Person>
+        <Person>
+            <Name>Alistair Stuart</Name>
+            <Email>alistair.stuart@halliburton.com</Email>
+            <Abbreviation>AGS</Abbreviation>
+        </Person>
+        <Person>
+            <Name>Antonio Acquaah</Name>
+            <Email>antonio.acquaah@halliburton.com</Email>
+            <Abbreviation>AA</Abbreviation>
+        </Person>
+    </People>
+    <Form>
+        <Entry Name="Mon"           Default="AGBNRW8MON1"/>
+        <Entry Name="App1"          Default="AGBNRW8APP1"/>
+        <Entry Name="App2"          Default="AGBNRW8APP2"/>
+        <Entry Name="Data1Machine"  Default="AGBNRW8DATA01"/>
+        <Entry Name="Data1Machine"  Default="AGBNRW8DATA02"/>
+        <Entry Name="Data1Instance" Default="AGBIWCDATA1"/>
+        <Entry Name="Data2Instance" Default="AGBIWCDATA2"/>
+    </Form>
+    <Title>Software Quality Assurance</Title>
+    <Subtitle>Phase 4 Upgrade</Subtitle>
+    <ProjectName>CVX-Agbami IWCPC</ProjectName>
+    <Versioning>
+        <Version>
+            <TextName>A</TextName>
+            <Date>2015-05-28</Date>
+            <Editor>NAC</Editor>
+            <Checker>AA</Checker>
+            <Approver>AGS</Approver>
+            <Description>Initial release</Description>
+        </Version>
+        <Version>
+            <TextName>B</TextName>
+            <Date>2016-04-14</Date>
+            <Editor>NAC</Editor>
+            <Checker>AA</Checker>
+            <Approver>AGS</Approver>
+            <Description>Added new wells to drill centers B and H</Description>
+        </Version>
+    </Versioning>
+    <Purpose>
+        This document is to be used as a procedure to ensure that the functionality of the software is validated against the requirements given. It is intended to be run prior to release of
+        the <d ref="Title"/> project to ensure the quality of the software.
+    </Purpose>
+    <Abbreviations>
+        <Abbr Name="BHPQ">Baker Hughes Production Quest</Abbr>
+        <Abbr Name="QA">Quality Assurance</Abbr>
+        <Abbr Name="CD">Compact Disk</Abbr>
+        <Abbr Name="DB">Database</Abbr>
+        <Abbr Name="HAL">Halliburton</Abbr>
+    </Abbreviations>
+    <References>
+        <Document ID="314423-02">
+            <Source>
+                <d aref="HAL"/>
+            </Source>
+            <Description>
+                <d aref="IWCPC"/>
+                <d aref="SMCS"/>
+            </Description>
+        </Document>
+        <Document ID="314423-02">
+            <Source>Unknown</Source>
+            <Description>
+                <d aref="DMS"/> Interface Tag Definition
+            </Description>
+        </Document>
+    </References>
+    <Preconditions>
+        <p>It is assumed that prior to executing this procedure:</p>
+        <ul>
+            <li>
+                The hardware is configured per <d aref="FPSO"/> implementation design requirements
+            </li>
+            <li>Backups of all databases has been performed and copied to a safe location</li>
+            <li>Backups of all drives on all machines has been copied to a safe location</li>
+            <li>The software has been installed and fully configured on the system</li>
+        </ul>
+    </Preconditions>
+    <Section Name="InstallationTest" Title="Installation Test">
+        <Section Title="Monitor">
+            <Section Title="Versions">
+                <Section Title="Operating System">
+                    <Procedure>
+                        <Step>
+                            Type <q>Ctrl + R</q> to bring up the <q>Run</q> dialog
+                        </Step>
+                        <Step>
+                            Type <q>control system</q> to launch the <q>System</q> window
+                        </Step>
+                        <Step>
+                            <p>
+                                Record the <q>Windows edition</q> and <q>Service Pack</q> number:
+                            </p>
+                            <table>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Value</th>
+                                </tr>
+                                <tr>
+                                    <th>Windows</th>
+                                    <th>
+                                        <form type="String"/>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>Service Pack</th>
+                                    <th>
+                                        <form type="String"/>
+                                    </th>
+                                </tr>
+                            </table>
+                        </Step>
+                    </Procedure>
+                </Section>
+            </Section>
+        </Section>
+    </Section>
+    <Signatures>
+        <Signature>
+            <Signatory>Tester</Signatory>
+            <Signatory>Witness</Signatory>
+            <Item>Printed Name</Item>
+            <Item>Date</Item>
+            <Item>Company</Item>
+            <Item>Position</Item>
+        </Signature>
+    </Signatures>
+</Procedure>
