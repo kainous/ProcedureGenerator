@@ -161,7 +161,7 @@ namespace ProcedureGenerator
         public static Paragraph AddNewSection(this Document document, string text)
         {
             _sectionNumber.Push(1);
-            text = string.Join(".", _sectionNumber) + " " + text;
+            text = string.Join(".", _sectionNumber.Reverse()) + " " + text;
             var p = new Paragraph(text)
             {
                 Font = new Font(Font.FontFamily.HELVETICA, 18, Font.BOLD)
@@ -174,7 +174,7 @@ namespace ProcedureGenerator
         {
             int i = _sectionNumber.Pop();
             _sectionNumber.Push(i + 1);
-            text = string.Join(".", _sectionNumber) + " " + text;
+            text = string.Join(".", _sectionNumber.Reverse()) + " " + text;
             var p = new Paragraph(text)
             {
                 Font = new Font(Font.FontFamily.HELVETICA, 18, Font.BOLD)
